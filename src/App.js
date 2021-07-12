@@ -2,11 +2,9 @@ import {useState} from "react"
 import {ChakraProvider,Button,
   FormControl,
   FormLabel,
-  FormErrorMessage,
-  FormHelperText,
   Input,
   Select,
-  Checkbox, CheckboxGroup,HStack,Box,Divider
+  Checkbox, CheckboxGroup,HStack,Box
 } from "@chakra-ui/react";
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
@@ -29,14 +27,14 @@ const SimpleDatePicker = () => {
 }
 
 function App() {
-  const [destination, setDestination] = useState("")
-  const [destinationCheck, setDestinationCheck] = useState("")
-  const [deadline, setDeadline] = useState("")
-  const [shipper, setShipper] = useState("")
-  const [deliveryDate, setDeliveryDate] = useState("")
-  const [ataoNo, setAtaoNo] = useState("")
-  const [sakataNo, setSakataNo] = useState("")
-  const [memo, setMemo] = useState("")
+  // const [destination, setDestination] = useState("")
+  // const [destinationCheck, setDestinationCheck] = useState("")
+  // const [deadline, setDeadline] = useState("")
+  // const [shipper, setShipper] = useState("")
+  // const [deliveryDate, setDeliveryDate] = useState("")
+  // const [ataoNo, setAtaoNo] = useState("")
+  // const [sakataNo, setSakataNo] = useState("")
+  // const [memo, setMemo] = useState("")
 
   return (
     <ChakraProvider>

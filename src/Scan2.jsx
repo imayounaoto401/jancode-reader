@@ -1,4 +1,4 @@
-import React , { useState,useEffect } from 'react'
+import React , {useEffect } from 'react'
 import Quagga from "quagga";
 
 
@@ -81,7 +81,7 @@ const Scan2 = (props) => {
 
       Quagga.onDetected(function (result) {
         //読み取り誤差が多いため、3回連続で同じ値だった場合に成功とする
-        if(DetectedCode==result.codeResult.code){
+        if(DetectedCode===result.codeResult.code){
           DetectedCount++;
         }else{
           DetectedCount=0;
