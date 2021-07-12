@@ -4,11 +4,13 @@ import Quagga from "quagga";
 
 
 const Scan2 = (props) => {
+  const {setScanStart,onSchan} = props
 
   useEffect(() => {
+    let timer ;
     let DetectedCount=0,DetectedCode="";
     let video,tmp,tmp_ctx,jan,prev,prev_ctx,w,h,mw,mh,x1,y1;
-    window.addEventListener('load',function(event){
+ //  window.addEventListener('load',function(event){
       video=document.createElement('video');
       video.setAttribute("autoplay","");
       video.setAttribute("muted","");
@@ -28,7 +30,7 @@ const Scan2 = (props) => {
         function(stream){
           video.srcObject = stream;
           //0.5秒毎にスキャンする
-          setTimeout(Scan,500,true);
+          timer = setTimeout(Scan,500,true);
         }
       ).catch( //許可されなかった場合
         function(err){jan.value+=err+'\n';}
@@ -93,10 +95,18 @@ const Scan2 = (props) => {
           jan.scrollTop=jan.scrollHeight;
           DetectedCode='';
           DetectedCount=0;
+
+          const jancode = result.codeResult.code
+          onSchan(jancode)
+          setScanStart(false)
+          clearTimeout(timer)
         }
       });
-    });
+   // });
 
+    return ()=> {
+      clearTimeout(timer)
+    }
   },[])
 
   return (
