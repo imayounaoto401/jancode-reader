@@ -1,11 +1,11 @@
-
+import {ChakraProvider,Button} from "@chakra-ui/react";
 import './App.css';
 
 function App() {
   return (
-    <div>
-      test
-    </div>
+    <ChakraProvider>
+      <Button>Chakra Button</Button>
+    </ChakraProvider>
   );
 }
 
