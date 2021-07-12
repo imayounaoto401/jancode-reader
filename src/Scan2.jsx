@@ -107,7 +107,7 @@ const Scan2 = (props) => {
     return ()=> {
       clearTimeout(timer)
     }
-  },[onSchan,setScanStart])
+  },[])
 
   return (
     <>

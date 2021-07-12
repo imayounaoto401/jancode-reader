@@ -50,7 +50,7 @@ function App() {
   const [scanStart,setScanStart] = useState(false)
 
   const [scanData,setScanData] = useState([
-      {code:"11111",name:"商品名テスト",size:"サイズカラーテスト",num:2}
+   //   {code:"11111",name:"商品名テスト",size:"サイズカラーテスト",num:2}
   ])
 
   const codeMap = {
