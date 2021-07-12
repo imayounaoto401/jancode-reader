@@ -67,7 +67,7 @@ const Scan2 = (props) => {
           reader.onload=function(){
             let config={
               decoder: {
-                readers: ["ean_reader","ean_8_reader"],
+                readers: ["code_128_reader", "ean_reader","ean_8_reader"],
                 multiple: false, //同時に複数のバーコードを解析しない
               },
               locator:{patchSize:"large",halfSample:false},
@@ -107,7 +107,7 @@ const Scan2 = (props) => {
     return ()=> {
       clearTimeout(timer)
     }
-  },[])
+  },[onSchan,setScanStart])
 
   return (
     <>
