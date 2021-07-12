@@ -11,6 +11,7 @@ import {ChakraProvider,Button,
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import './App.css';
+import Scan2 from "./Scan2";
 
 const SimpleDatePicker = () => {
  // const initialDate = new Date()
@@ -108,6 +109,7 @@ function App() {
         <Button colorScheme="blue">読取</Button>
       </Box>
 
+      <Scan2/>
 
     </ChakraProvider>
   );
